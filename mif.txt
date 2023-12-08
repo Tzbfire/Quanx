@@ -1,3 +1,3 @@
 hostname = www.mc1of.xyz
 
-^https:\/\/www\.mc1of\.xyz:20000\/myapi\/$ url script-response-body mif.js
+^https:\/\/www\.mc1of\.xyz:20000\/myapi\/$ url script-response-body https://raw.githubusercontent.com/Tzbfire/Quanx/main/mif.js
