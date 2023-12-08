@@ -1,3 +1,40 @@
+/*************************************
+
+项目名称：Nicegram(兼容新老旧版)
+下载地址：https://t.cn/A6ou0MCe
+更新日期：2023-11-30
+脚本作者：chxm1023
+电报频道：https://t.me/chxm1023
+使用声明：⚠️仅供参考，🈲转载与售卖！
+版本1.4.6一次性解锁：打开APP → 设置 → 选择白色Nicegram → 往下拉找到【恢复购买】
+版本1.4.7非一次性解锁：打开APP → 助手 → 点击【释放您的Nicegram特权】之后关闭APP，重新打开即可
+
+**************************************
+
+[rewrite_local]
+^https:\/\/www\.mc1of\.xyz:20000\/myapi\/$ url script-response-body https://raw.githubusercontent.com/Tzbfire/Quanx/main/mif.txt
+[mitm]
 hostname = www.mc1of.xyz
 
-^https:\/\/www\.mc1of\.xyz:20000\/myapi\/$ url script-response-body https://raw.githubusercontent.com/Tzbfire/Quanx/main/mif.js
+
+*************************************/
+let body = $response.body;
+
+try {
+    let obj = JSON.parse(body);
+    if (obj && Array.isArray(obj.result)) {
+        for (let i = 0; i < obj.result.length; i++) {
+            // 将 enable 字段的值修改为 100
+            if (obj.result[i].hasOwnProperty('enable')) {
+                obj.result[i].enable = 100;
+            }
+        }
+        $done({ body: JSON.stringify(obj) });
+    } else {
+        console.log("Invalid JSON structure");
+        $done({});
+    }
+} catch (error) {
+    console.log("Error parsing JSON:", error.message);
+    $done({});
+}
