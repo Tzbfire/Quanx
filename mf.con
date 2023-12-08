@@ -5,8 +5,8 @@
 **************************************
 
 [rewrite_local]
-^https:\/\/www\.mc1of\.xyz:20000\/myapi\/.*$ url script-response-body https://raw.githubusercontent.com/Tzbfire/Quanx/main/mf.conf
-^https:\/\/www\.yjzpzs\.com:44158\/myapi\/.*$ url script-response-body https://raw.githubusercontent.com/Tzbfire/Quanx/main/mf.conf
+^https:\/\/www\.mc1of\.xyz:20000\/myapi\/.*$ url script-response-body https://raw.githubusercontent.com/Tzbfire/Quanx/main/mf.con
+^https:\/\/www\.yjzpzs\.com:44158\/myapi\/.*$ url script-response-body https://raw.githubusercontent.com/Tzbfire/Quanx/main/mf.con
 [mitm]
 hostname = www.mc1of.xyz,www.yjzpzs.com
 
@@ -18,10 +18,8 @@ try {
     let obj = JSON.parse(body);
     if (obj && Array.isArray(obj.result)) {
         for (let i = 0; i < obj.result.length; i++) {
-            // 使用正则表达式匹配并修改蜂蜜数量
-            if (obj.result[i].hasOwnProperty('enable_desc')) {
-                obj.result[i]。enable_desc = obj.result[i]。enable_desc.replace(/蜂蜜\d+罐/, '蜂蜜100罐');
-            }
+            // 将 enable 字段的值修改为 100
+            obj.result[i].enable = 100;
         }
         $done({ body: JSON.stringify(obj) });
     }
