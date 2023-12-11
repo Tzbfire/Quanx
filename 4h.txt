@@ -5,7 +5,7 @@
 **************************************
 
 [rewrite_local]
-^https:\/\/foxapi\.zduhxck\.com\/.*$ url script-response-body https://raw.githubusercontent.com/Tzbfire/Quanx/main/3h.txt
+^https:\/\/foxapi\.zduhxck\.com\/.*$ url script-response-body https://raw.githubusercontent.com/Tzbfire/Quanx/main/4h.txt
 #^https:\/\/www\.mc1of\.xyz:20000\/myapi\/.*$ url script-response-body https://raw.githubusercontent.com/Tzbfire/Quanx/main/yh.txt
 #^https:\/\/www\.yjzpzs\.com:44158\/myapi\/.*$ url script-response-body https://raw.githubusercontent.com/Tzbfire/Quanx/main/yh.txt
 [mitm]
