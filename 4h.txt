@@ -13,6 +13,8 @@
 hostname = foxapi.zduhxck.com
 
 *************************************/
+
+
 let body = $response.body;
 
 try {
@@ -32,9 +34,10 @@ try {
         if (obj.result.hasOwnProperty('share_count')) {
             obj.result.share_count = 999;
         }
-        // 将 "every_day_time" 字段的值修改为 24小时
+
+        // 将 "every_day_time" 字段的值修改为 1140
         if (obj.result.hasOwnProperty('every_day_time')) {
-            obj.result.share_count = 1140;
+            obj.result.every_day_time = 1140;
         }
 
         $done({ body: JSON.stringify(obj) });
