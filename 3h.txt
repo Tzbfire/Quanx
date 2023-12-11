@@ -32,6 +32,10 @@ try {
         if (obj.result.hasOwnProperty('share_count')) {
             obj.result.share_count = 999;
         }
+        // 将 "every_day_time" 字段的值修改为 24小时
+        if (obj.result.hasOwnProperty('every_day_time')) {
+            obj.result.share_count = 1140;
+        }
 
         $done({ body: JSON.stringify(obj) });
     }
