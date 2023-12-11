@@ -5,12 +5,12 @@
 **************************************
 
 [rewrite_local]
-^http://api\.foxvpn\.live/vpn/user_info$ url script-response-body https://raw.githubusercontent.com/Tzbfire/Quanx/main/yh.conf
-#^https:\/\/www\.mc1of\.xyz:20000\/myapi\/.*$ url script-response-body https://raw.githubusercontent.com/Tzbfire/Quanx/main/yh.conf
-#^https:\/\/www\.yjzpzs\.com:44158\/myapi\/.*$ url script-response-body https://raw.githubusercontent.com/Tzbfire/Quanx/main/yh.conf
+^http://api\.foxvpn\.live/vpn/user_info$ url script-response-body https://raw.githubusercontent.com/Tzbfire/Quanx/main/yh.txt
+#^https:\/\/www\.mc1of\.xyz:20000\/myapi\/.*$ url script-response-body https://raw.githubusercontent.com/Tzbfire/Quanx/main/yh.txt
+#^https:\/\/www\.yjzpzs\.com:44158\/myapi\/.*$ url script-response-body https://raw.githubusercontent.com/Tzbfire/Quanx/main/yh.txt
 [mitm]
 #hostname = www.mc1of.xyz,www.yjzpzs.com
-hostname = api.foxvpn.live
+hostname = ^https:\/\/foxapi\.zduhxck\.com\/vpn\/.*$
 
 *************************************/
 let body = $response.body;
