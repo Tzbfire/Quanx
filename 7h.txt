@@ -11,27 +11,24 @@ hostname = api.mlinkapp.cc
 
 *************************************/
 
+let body = $response.body;
 
-const modifiedResponse = {
-    "msg": "OK",
-    "data": {
-        "id": 1739169681094623233,
-        "displayName": "",
-        "expireTime": 1703486691, // 修改过期时间为指定值
-        "phone": "",
-        "status": 0,
-        "agentNum": 16,
-        "avatar": "",
-        "level": 3, // 修改用户等级为指定值
-        "freeTime": 1382400000,
-        "username": "",
-        "role": "anonymous",
-        "vipType": "free",
-        "userNumber": 2323264,
-        "email": "",
-        "eid": 6583700
-    },
-    "code": 0
-};
+try {
+    let obj = JSON.parse(body);
+    if (obj && obj.data) {
+        // 修改 level 字段为 3
+        if (obj.data.hasOwnProperty('level')) {
+            obj.data.level = 3;
+        }
 
-$done({ body: JSON.stringify(modifiedResponse) });
+        // 修改 expireTime 字段为指定值
+        if (obj.data.hasOwnProperty('expireTime')) {
+            obj.data.expireTime = 1734590691;
+        }
+
+        $done({ body: JSON.stringify(obj) });
+    }
+} catch (error) {
+    console.log("Error parsing JSON:", error.message);
+    $done({});
+}
