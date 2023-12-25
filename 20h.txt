@@ -12,10 +12,10 @@ hostname = api.mlinkapp.cc
 *************************************/
 let Q = JSON.parse($response.body);
 Q.data.level = 3;
-Q.data.duration = year;
+Q.data.duration = "year"; // 将 year 用引号包裹，确保它是一个字符串
 Q.data.status = 4;
 Q.data.nearCost = 1.2;
-Q.data.sku = svip_1_year;
-
+Q.data.sku = "svip_1_year"; // 将 svip_1_year 用引号包裹，确保它是一个字符串
 
 $done({ body: JSON.stringify(Q) });
+
