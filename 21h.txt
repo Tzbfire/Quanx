@@ -5,7 +5,7 @@
 **************************************
 
 [rewrite_local]
-^https:\/\/api\.mlinkapp\.cc\/v1\/user url script-response-body https://raw.githubusercontent.com/Tzbfire/Quanx/main/21h.txt
+^https:\/\/api\.mlinkapp\.cc\/v1\/user url script-response-body https://raw.githubusercontent.com/Tzbfire/Quanx/main/20h.txt
 [mitm]
 hostname = api.mlinkapp.cc
 
@@ -16,6 +16,8 @@ Q.data.duration = "year"; // 将 year 用引号包裹，确保它是一个字符
 Q.data.status = 4;
 Q.data.nearCost = 1.2;
 Q.data.sku = "svip_1_year"; // 将 svip_1_year 用引号包裹，确保它是一个字符串
+Q.data.displayName = "破解测试";
+Q.data.username =  "破解测试";
+Q.data.expireTime = 4704954138839;
 
 $done({ body: JSON.stringify(Q) });
-
