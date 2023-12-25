@@ -10,27 +10,10 @@
 hostname = api.mlinkapp.cc
 
 *************************************/
+let Q = JSON.parse($response.body);
+Q.data.expireTime = 1704954138839;
+Q.data.status = 4；
+Q.data.level = 3;
+Q.data.vipType = svip_1_year；
 
-let body = $response.body;
-
-try {
-    let obj = JSON.parse(body);
-    if (obj && obj.data) {
-        // 修改 level 字段为 3
-        if (obj.data.hasOwnProperty('level')) {
-            obj.data.level = 3;
-        }
-
-        // 修改 expireTime 字段为指定值
-        if (obj.data.hasOwnProperty('expireTime')) {
-            obj.data.expireTime = 1607496291;
-        }
-        if (obj.data.hasOwnProperty('level')) {
-            obj.data.level = 3;
-        }
-        $done({ body: JSON.stringify(obj) });
-    }
-} catch (error) {
-    console.log("Error parsing JSON:", error.message);
-    $done({});
-}
+$done({body: JSON.stringify(Q)});
