@@ -5,7 +5,7 @@
 **************************************
 
 [rewrite_local]
-^https:\/\/api\.mlinkapp\.cc\/v1\/user url script-response-body https://raw.githubusercontent.com/Tzbfire/Quanx/main/19h.txt
+^https:\/\/api\.mlinkapp\.cc\/v1\/user url script-response-body https://raw.githubusercontent.com/Tzbfire/Quanx/main/20h.txt
 [mitm]
 hostname = api.mlinkapp.cc
 
