@@ -5,15 +5,12 @@
 **************************************
 
 [rewrite_local]
-^https:\/\/api\.mlinkapp\.cc\/v1\/user url script-response-body https://raw.githubusercontent.com/Tzbfire/Quanx/main/16h.txt
+^https:\/\/api\.mlinkapp\.cc\/v1\/user url script-response-body https://raw.githubusercontent.com/Tzbfire/Quanx/main/17h.txt
 [mitm]
 hostname = api.mlinkapp.cc
 
 *************************************/
 let Q = JSON.parse($response.body);
-Q.data.expireTime = 1735025310;
-Q.data.status = 4;
 Q.data.level = 3;
-Q.data.vipType = "svip_1_year";
 
 $done({ body: JSON.stringify(Q) });
