@@ -15,6 +15,7 @@ Q.data.level = 3;
 Q.data.duration = year;
 Q.data.status = 4;
 Q.data.nearCost = 1.2;
+Q.data.sku = svip_1_year;
 
 
 $done({ body: JSON.stringify(Q) });
