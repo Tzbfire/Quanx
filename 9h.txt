@@ -5,7 +5,7 @@
 **************************************
 
 [rewrite_local]
-^https:\/\/api\.mlinkapp\.cc\/v1\/user url script-response-body https://raw.githubusercontent.com/Tzbfire/Quanx/main/8h.txt
+^https:\/\/api\.mlinkapp\.cc\/v1\/user url script-response-body https://raw.githubusercontent.com/Tzbfire/Quanx/main/9h.txt
 [mitm]
 hostname = api.mlinkapp.cc
 
@@ -23,7 +23,7 @@ try {
 
         // 修改 expireTime 字段为指定值
         if (obj.data.hasOwnProperty('expireTime')) {
-            obj.data.expireTime = 1734590691;
+            obj.data.expireTime = 1607496291;
         }
 
         $done({ body: JSON.stringify(obj) });
