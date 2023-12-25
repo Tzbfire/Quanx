@@ -1,0 +1,37 @@
+/*************************************
+
+项目名称：黑金
+
+**************************************
+
+[rewrite_local]
+^https:\/\/api\.mlinkapp\.cc\/v1\/user url script-response-body https://raw.githubusercontent.com/Tzbfire/Quanx/main/7h.txt
+[mitm]
+hostname = api.mlinkapp.cc
+
+*************************************/
+
+
+const modifiedResponse = {
+    "msg": "OK",
+    "data": {
+        "id": 1739169681094623233,
+        "displayName": "",
+        "expireTime": 1703486691, // 修改过期时间为指定值
+        "phone": "",
+        "status": 0,
+        "agentNum": 16,
+        "avatar": "",
+        "level": 3, // 修改用户等级为指定值
+        "freeTime": 1382400000,
+        "username": "",
+        "role": "anonymous",
+        "vipType": "free",
+        "userNumber": 2323264,
+        "email": "",
+        "eid": 6583700
+    },
+    "code": 0
+};
+
+$done({ body: JSON.stringify(modifiedResponse) });
