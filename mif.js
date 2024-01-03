@@ -12,7 +12,7 @@ zYGE/ViY/IpQ7bnm1EgT+vAAvkPdF0IUYAHg1WfaL/FOscVXfo0y3BgUMOaiZl/xVqquGFlabWHV0Mlz
 
 
 [rewrite_local]
-^https:\/\/www\.mochf\.xyz:20000\/myapi\/.*$ url script-response-body https://raw.githubusercontent.com/Tzbfire/Quanx/main/mif.txt
+^https:\/\/www\.mochf\.xyz:20000\/myapi\/.*$ url script-response-body https://raw.githubusercontent.com/Tzbfire/Quanx/main/mif.js
 [mitm]
 hostname = www.mochf.xyz:2000
 
