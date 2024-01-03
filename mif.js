@@ -25,7 +25,7 @@ let body = $response.body;
 body = AES_Decrypt(body);
 body = JSON.parse(body);
 body = body.replace(/expire_time":\d+/g, 'expire_time": 9733111678');
-body = body.replace(/level":\d+/g, 'level": 99');
+body = body.replace(/level":\d+/g, 'level": 3');
 
 body = AES_Encrypt(body);
 $done({body});
