@@ -5,7 +5,7 @@
 **************************************
 
 [rewrite_local]
-^https:\/\/www\.mochf\.xyz:20000\/myapi\/eapiuserinfo\?$ url script-response-body https://raw.githubusercontent.com/Tzbfire/Quanx/main/1mif.txt
+^https:\/\/www\.mochf\.xyz:20000\/myapi\/.*$ url script-response-body https://raw.githubusercontent.com/Tzbfire/Quanx/main/1mif.txt
 [mitm]
 hostname = www.mochf.xyz:2000
 
